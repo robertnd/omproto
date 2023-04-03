@@ -1,0 +1,122 @@
+<div class="content-wrapper" style="min-height: 2171.31px;" *ngIf="currentUser.authenticated && canView('advisors-new',currentUser)">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>New Advisor</h1>
+                </div>
+                <div class="col-sm-9">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/intermed/advisors">Advisors</a></li>
+                        <li class="breadcrumb-item active">New OpAdvisors</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">*</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="bs-stepper">
+                                <div class="bs-stepper-header" role="tablist">
+
+                                    <div class="step active" data-target="#personalinfo-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="personalinfo-part" id="personalinfo-part-trigger">
+                                            <span class="bs-stepper-circle">1</span>
+                                            <span class="bs-stepper-label">Personal Info</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#contacts-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="contacts-part" id="contacts-part-trigger">
+                                            <span class="bs-stepper-circle">2</span>
+                                            <span class="bs-stepper-label">Contacts</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#information-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="information-part" id="information-part-trigger">
+                                            <span class="bs-stepper-circle">3</span>
+                                            <span class="bs-stepper-label">Summary</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bs-stepper-content">
+
+                                    <div id="personalinfo-part" class="content active dstepper-block" role="tabpanel"
+                                        aria-labelledby="personalinfo-part-trigger">
+                                        <div class="form-group">
+                                            <label for="inputFirstName">First Name</label>
+                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Enter first name">
+                                            <label for="inputMiddleNames">Middle Names</label>
+                                            <input type="text" class="form-control" id="inputMiddleNames" placeholder="Enter middle name(s)">
+                                            <label for="inputSurname">Surname</label>
+                                            <input type="text" class="form-control" id="inputSurname" placeholder="Enter surname">
+                                            <label for="inputDOB">PIN</label>
+                                            <input type="text" class="form-control" id="inputDOB" placeholder="Enter PIN">
+                                        </div>
+                                        <button class="btn btn-primary btn-sm" (click)="next()"><i class="fa fa-arrow-circle-right"></i> Next</button>
+                                    </div>
+                                    <div id="contacts-part" class="content" role="tabpanel"
+                                        aria-labelledby="contacts-part-trigger">
+                                        <div class="form-group">
+                                            <label for="inputPOBox">P.O Box</label>
+                                            <input type="text" class="form-control" id="inputPOBox" placeholder="Enter P.O Box">
+                                            <label for="inputPOCode">Postal Code</label>
+                                            <input type="text" class="form-control" id="inputPOCode" placeholder="Enter post code">
+                                            <label for="inputMunic">City / Town</label>
+                                            <input type="text" class="form-control" id="inputMunic" placeholder="Enter city or town">
+                                            <label for="inputPhyicalAddress">Physical Address</label>
+                                            <input type="text" class="form-control" id="inputPhyicalAddress" placeholder="Enter phyisical address">
+                                            <label for="inputEmail">Email</label>
+                                            <input type="email" class="form-control" id="inputGender" placeholder="Enter email">
+                                            <label for="inputPhone1">Phone Number (Primary)</label>
+                                            <input type="text" class="form-control" id="inputPhone1" placeholder="Enter primary phone number">
+                                            <label for="inputPhone2">Phone Number (Other)</label>
+                                            <input type="text" class="form-control" id="inputPhone2" placeholder="Enter other phone number">
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mr-1" (click)="previous()"><i class="fa fa-arrow-circle-left"></i> Previous</button>
+                                        <button class="btn btn-primary btn-sm" (click)="next()"><i class="fa fa-arrow-circle-right"></i> Next</button>
+                                    </div>
+                                    
+
+                                    <div id="information-part" class="content" role="tabpanel"
+                                        aria-labelledby="information-part-trigger">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Summary</label>
+                                            <span><p>
+                                                <b>Names:</b> Jon Jones<br>
+                                                <b>PIN:</b> A0064536456<br>
+                                                <b>Postal Address:</b> P.O Box 23424<br>
+                                                <b>Postal Code:</b> 00200<br>
+                                                <b>Town/City:</b> Nairobi<br>
+                                                <b>Email:</b> akmalesi@fastfreightaviation.co.ke<br>
+                                                <b>Phone:</b> 254722000001<br>
+                                                <b>Phone (Other):</b> 254733111000<br><br>
+                                            </p></span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mr-1" (click)="previous()"><i class="fa fa-arrow-circle-left"></i> Previous</button>
+                                        <button type="submit" class="btn btn-primary btn-sm" disabled><i class="fa fa-upload"></i> Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

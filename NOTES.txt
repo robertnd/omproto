@@ -1,0 +1,12 @@
+EC2 Login
+---------
+ssh -i "omprotoKeys.pem" ec2-user@ec2-44-197-238-184.compute-1.amazonaws.com
+
+/dist copy
+---------
+scp -r -i ./omprotoKeys.pem /Users/robertndonga/Projects/Labs/FE/trial2/om/omproto/dist/omproto.zip ec2-user@ec2-44-197-238-184.compute-1.amazonaws.com:/usr/share/nginx/html/
+
+
+NGINX webroot
+-------------
+/usr/share/nginx/html

@@ -1,0 +1,117 @@
+<div class="content-wrapper" style="min-height: 2171.31px;" *ngIf="currentUser.authenticated && canView('products-new',currentUser)">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>New Product</h1>
+                </div>
+                <div class="col-sm-9">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/business/crm/products">Products</a></li>
+                        <li class="breadcrumb-item active">New Product</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">*</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="bs-stepper">
+                                <div class="bs-stepper-header" role="tablist">
+
+                                    <div class="step active" data-target="#personalinfo-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="personalinfo-part" id="personalinfo-part-trigger">
+                                            <span class="bs-stepper-circle">1</span>
+                                            <span class="bs-stepper-label">Product Info</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#contacts-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="contacts-part" id="contacts-part-trigger">
+                                            <span class="bs-stepper-circle">2</span>
+                                            <span class="bs-stepper-label">Other</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#information-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="information-part" id="information-part-trigger">
+                                            <span class="bs-stepper-circle">3</span>
+                                            <span class="bs-stepper-label">Summary</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bs-stepper-content">
+
+                                    <div id="personalinfo-part" class="content active dstepper-block" role="tabpanel"
+                                        aria-labelledby="personalinfo-part-trigger">
+                                        <div class="form-group">
+                                            <label for="inputFirstName">Product Name</label>
+                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Enter product name">
+                                            <label for="inputFirstName">Code</label>
+                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Enter code">
+                                            <label for="inputMiddleNames">Description</label>
+                                            <input type="text" class="form-control" id="inputMiddleNames" placeholder="Enter description">
+                                            <label for="inputSurname">Classification</label>
+                                            <input type="text" class="form-control" id="inputSurname" placeholder="Enter classification">
+                                            <label for="inputDOB">Target Market</label>
+                                            <input type="text" class="form-control" id="inputDOB" placeholder="Enter target market">
+                                        </div>
+                                        <button class="btn btn-primary btn-sm" (click)="next()"><i class="fa fa-arrow-circle-right"></i> Next</button>
+                                    </div>
+                                    <div id="contacts-part" class="content" role="tabpanel"
+                                        aria-labelledby="contacts-part-trigger">
+                                        <div class="form-group">
+                                            <label for="inputPOBox">Min Contract Value</label>
+                                            <input type="text" class="form-control" id="inputPOBox" placeholder="Enter min value">
+                                            <label for="inputPOCode">Max Contract Value</label>
+                                            <input type="text" class="form-control" id="inputPOCode" placeholder="Enter max value">
+                                            <label for="inputMunic">Witholding Tax Rate</label>
+                                            <input type="text" class="form-control" id="inputMunic" placeholder="Enter tax rate">
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mr-1" (click)="previous()"><i class="fa fa-arrow-circle-left"></i> Previous</button>
+                                        <button class="btn btn-primary btn-sm" (click)="next()"><i class="fa fa-arrow-circle-right"></i> Next</button>
+                                    </div>
+                                    
+                                    <div id="information-part" class="content" role="tabpanel"
+                                        aria-labelledby="information-part-trigger">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Summary</label>
+                                            <span><p>
+                                                <b>Product Name:</b> Sea Vessels Insurance Cover<br>
+                                                <b>Code:</b> S104354<br>
+                                                <b>Description:</b> Cover for light sea-faring vessels<br>
+                                                <b>Classification:</b> 00Q200<br>
+                                                <b>Target Market:</b> Individual, SME, Corporate<br>
+                                                <b>Min Contract Value:</b> Kshs 2,500,000<br>
+                                                <b>Max Contract Value:</b> Kshs 25,500,000<br>
+                                                <b>WT Rate:</b> 1.2<br><br>
+
+                                                
+                                            </p></span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mr-1" (click)="previous()"><i class="fa fa-arrow-circle-left"></i> Previous</button>
+                                        <button type="submit" class="btn btn-primary btn-sm" disabled><i class="fa fa-upload"></i> Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

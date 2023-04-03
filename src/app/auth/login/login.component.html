@@ -1,0 +1,88 @@
+<div *ngIf="!currentUser.authenticated">
+    <div class="row">
+        <div class="login-logo col-sm-4">
+        </div>
+        <div class="login-logo col-sm-4">
+            <div class="login-logo">
+                <p>&nbsp;</p>
+                <img src="assets/img/om_icon.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <a href="https://www.oldmutual.co.ke/">
+                    <p class="mb-1">
+                    <b>System</b>1
+                </p>
+                </a>
+            </div>
+            <!--(ngSubmit)="f.form.valid && onSubmit()"-->
+            <!-- *ngIf="f.submitted && isLoginFailed" style="color:orangered;" -->
+            <div class="card">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">Sign in</p>
+                    <div *ngIf="f.submitted && isLoginFailed">
+                        <i class="nav-icon fa fa-exclamation-triangle" style="color:orangered;"></i>
+                        <p style="color:orangered;font-size:18px;">{{ errorMessage }}</p>
+                    </div>
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert">
+                        <div>
+                            <p style="color:orangered;font-size:18px;">Username required</p>
+                        </div>
+                    </div>
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+                        <div>
+                            <p style="color:orangered;font-size:18px;">Password required</p>
+                        </div>
+                    </div>
+                    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="form.username" #username="ngModel" required placeholder="Username">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="form.password"  #password="ngModel" required placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- <div class="icheck-primary">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">
+                                        Remember Me
+                                    </label>
+                                </div> -->
+                            </div>
+        
+                            <div class="col-4">
+                                <div class="row">
+                                    <button [disabled]="f.invalid" type="submit" class="btn btn-success btn-block">Sign In</button>
+                                    <button class="btn btn-link">Forgot password</button>
+                                </div>
+                                
+                                <!-- <button (click)="loginProc()" class="btn btn-success btn-block">Sign In</button> -->
+                                <!-- <button type="submit" class="btn btn-success float-left"><i class="fa fa-address-card"></i>  New Opportunity *
+                                </button> -->
+                            </div>
+        
+                        </div>
+                    </form>
+                    
+                
+                </div>
+                
+        
+            </div>
+        </div>
+        <div class="login-logo col-sm-4">
+    
+        </div>
+
+    </div>
+    
+</div>

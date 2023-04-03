@@ -1,0 +1,168 @@
+<div class="content-wrapper" *ngIf="currentUser.authenticated && canView('product-detail',currentUser)">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-4">
+                    <h1>Education Savings Plan</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active"><a routerLink="/business/crm/customers">Products</a></li>
+                        <li class="breadcrumb-item active">Product Profile</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+                   
+
+
+                    <div class="card card-primary">
+                        <div class="card-header bg-secondary">
+                            <h3 class="card-title">Features</h3>
+                        </div>
+
+                        <div class="card-body">
+                            
+                            <p class="text-muted">
+                                At maturity UAP Old Mutual guarantees that the benefit payable will not be less than the
+                                total contributions received during the term of the policy less charges and withdrawals
+                            </p>
+                            <hr>
+                            
+                            <p class="text-muted">The policy allows you to make lump sum injections worth at least three times your monthly
+                                contribution</p>
+                            <hr>
+
+                            <p class="text-muted">The policy has flexible premium payment plans. Premiums can be paid monthly, quarterly
+                                or annually</p>
+                            <hr>
+
+                            <p class="text-muted">Policy alterations such as premium frequency change, premium increase or decrease are
+                                allowed</p>
+                            <hr>
+
+                            <p class="text-muted">The policy can be used as collateral to secure loans</p>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#benefits"
+                                    data-toggle="tab">Benefits</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#eligibility"
+                                        data-toggle="tab">Eligibility</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+
+                                
+                                <div class="active tab-pane" id="benefits">
+                                    
+                                    <div class="row">
+                                        <div class="col-9 table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Maturity Benefit</td>
+                                                        <td>Total premium contributions plus interest less charges and withdrawals</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Partial Maturities</td>
+                                                        <td> In the last 4 years you can access annual benefits worth 20% of your fund
+                                                            value at each policy anniversary</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Withdrawals</td>
+                                                        <td>Access to 15% of the premiums plus accrued interest is allowed with two free
+                                                            annual withdrawals</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Life Cover</td>
+                                                        <td>A life cover equal to the sum of future gross premiums that would have been</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tax Relief</td>
+                                                        <td>The policy allows for a tax relief worth 15% of the premiums subject to a
+                                                            maximum relief of Kes. 5,000 monthly</td>
+                                                    </tr>
+                                            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+
+                                <div class="active tab-pane" id="eligibility">
+                                    
+                                    <div class="row">
+                                        <div class="col-9 table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    <tr>
+                                                        <td>The minimum monthly premium contribution is Kes. 7,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Term - The policy has a fixed term of ten years</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Entry Age - Individuals aged between 18 and 65 can take up the policy</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>There is no upper limit in the premiums payable</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>No restrictions in the number of policies one can take up</td>
+                                                    </tr>
+                                                    
+                                            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+
+                            
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>

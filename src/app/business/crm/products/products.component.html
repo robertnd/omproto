@@ -1,0 +1,132 @@
+<div class="content-wrapper" *ngIf="currentUser.authenticated && canView('products',currentUser)">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Products</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Products</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+
+        <div class="card">
+            <div class="card-header">
+                <form routerLink="/business/crm/products/new">
+                    <button type="submit" class="btn btn-success float-left"><i class="fa fa-address-card"></i>  New Product *
+                    </button>
+                </form>
+            
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <!-- <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button> -->
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 2%">
+                                #
+                            </th>
+                            <th style="width: 43%">
+                                Name
+                            </th>
+                            <th style="width: 45%">
+                                Description
+                            </th>
+                            <th style="width: 10%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                <a routerLink="/business/crm/product/detail">
+                                    Life & Asset Management - Education Savings Plan
+                                </a>
+                            </td>
+                            <td>A life cover equal to the sum of future gross premiums that would have been
+                                paid for the remaining term of the policy with a free cover limit of Kes.1, 200,000 is provided
+                            </td>
+                            <td class="project-actions text-right">
+                                <small>
+                                    <a routerLink="/business/crm/product/detail"><i class="fas fa-folder"></i> View</a>&nbsp;&nbsp;
+                                </small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Life & Asset Management - Elimika Education Plan
+                            </td>
+                            <td>The policy allows for a tax relief worth 15% of the premiums subject to a maximum
+                                relief of Kes. 5,000.00 Monthly
+                            </td>
+                            <td class="project-actions text-right">
+                                <small>
+                                    <a routerLink="#"><i class="fas fa-folder"></i> View</a>&nbsp;&nbsp;
+                                </small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                Life & Asset Management - Lengo Savings Plan
+                            </td>
+                            <td>A life cover equal to the sum of future gross premiums that would have been
+                                paid for the remaining term of the policy with a free cover limit of Kes.1, 200,000 is provided
+                            </td>
+                            <td class="project-actions text-right">
+                                <small>
+                                    <a routerLink="#"><i class="fas fa-folder"></i> View</a>&nbsp;&nbsp;
+                                </small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                Life & Asset Management - Money Market Fund
+                            </td>
+                            <td>Minimum initial investment of Kes. 1,000
+                            </td>
+                            <td class="project-actions text-right">
+                                <small>
+                                    <a routerLink="#"><i class="fas fa-folder"></i> View</a>&nbsp;&nbsp;
+                                </small>
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

@@ -1,0 +1,168 @@
+<div class="content-wrapper" *ngIf="currentUser.authenticated && canView('advisors-detail',currentUser)">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-4">
+                    <h1>Adrian Weiss</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active"><a routerLink="/intermed/advisors">Advisors</a></li>
+                        <li class="breadcrumb-item active">Advisor Profile</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="card card-primary card-outline">
+                        <div class="card-body box-profile">
+                            <div class="text-center">
+                                <img class="profile-user-img img-fluid img-circle"
+                                    src="../../assets/img/avatar.png" alt="User profile picture">
+                            </div>
+
+                            <p class="text-muted text-center"><i class="fa fa-phone mr-2"></i>(020) 43534535<br>
+                                <i class="fa fa-envelope mr-2"></i>aweiss@verge.net<br>
+                            </p>
+                            <ul class="list-group list-group-unbordered mb-3">
+                                
+                                
+                            </ul>
+                            <hr>
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                            <p class="text-muted">KICC, Room 203<br>
+                                KICC Road Ave, Nairobi</p>
+                            <hr>
+                            <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+                            <p class="text-muted">N/A</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <!-- <div class="card-header p-2">
+                        </div> -->
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header border-0">
+                                  <h3 class="card-title">Products</h3>
+                                  <div class="card-tools">
+                                    <a href="#" class="btn btn-tool btn-sm">
+                                      <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-tool btn-sm">
+                                      <i class="fas fa-bars"></i>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="card-body table-responsive p-0">
+                                  <table class="table table-striped table-valign-middle">
+                                    <thead>
+                                      <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Sales</th>
+                                        <th>More</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      
+                                      <tr>
+                                        <td>
+                                          <i class="fa fa-tags mr-2"></i>
+                                          Student Personal Accident
+                                        </td>
+                                        <td>Kshs 23,500</td>
+                                        <td>
+                                          <small class="text-warning mr-1">
+                                            <i class="fas fa-arrow-down"></i>
+                                            0.25%
+                                          </small>
+                                          33 Sold
+                                        </td>
+                                        <td>
+                                          <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <i class="fa fa-tags mr-2"></i>
+                                          Golfer's Insurance
+                                        </td>
+                                        <td>Kshs 10,900</td>
+                                        <td>
+                                          <small class="text-danger mr-1">
+                                            <i class="fas fa-arrow-down"></i>
+                                            3%
+                                          </small>
+                                          38 Sold
+                                        </td>
+                                        <td>
+                                          <a href="#" class="text-muted">
+                                            <i class="fas fa-search"></i>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header border-0">
+                              <div class="d-flex justify-content-between">
+                                <h3 class="card-title">Sales Summary</h3>
+                                <a href="javascript:void(0);">View Report</a>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex">
+                                <p class="d-flex flex-column">
+                                  <span class="text-bold text-lg">Kshs 34,400.00</span>
+                                  <span>Sales Over Time</span>
+                                </p>
+                                <p class="ml-auto d-flex flex-column text-right">
+                                  <span class="text-success">
+                                    <i class="fas fa-arrow-up"></i> 33.1%
+                                  </span>
+                                  <span class="text-muted">Since last month</span>
+                                </p>
+                              </div>
+              
+                              <div class="position-relative mb-4">
+                                <canvas id="sales-chart" height="200"></canvas>
+                              </div>
+                              <div class="d-flex flex-row justify-content-end">
+                                <span class="mr-2">
+                                  <i class="fas fa-square text-primary"></i> This year
+                                </span>
+                                <span>
+                                  <i class="fas fa-square text-gray"></i> Last year
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
