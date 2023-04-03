@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
 import { ViewService } from 'src/app/services/view.service';
-import Stepper from 'bs-stepper';
 import { Router } from '@angular/router';
-
+import Stepper from 'bs-stepper';
 
 @Component({
   selector: 'app-leads-new',
   templateUrl: './leads-new.component.html',
   styleUrls: ['./leads-new.component.scss']
 })
-export class LeadsNewComponent {
+export class LeadsNewComponent implements AfterViewInit, OnInit {
 
   currentUser: any;
   canView: any;
-  private stepper!: Stepper;
+
+  @ViewChild('bsStepper', { static: false }) stepperElement!: ElementRef<any>;
+  public  stepper!: Stepper;
 
   constructor(private storageService: StorageService, 
     private viewService: ViewService,
@@ -28,15 +29,16 @@ export class LeadsNewComponent {
     this.stepper.previous();
   }
 
+  ngAfterViewInit() {
+    const stepEl = document.querySelector('.bs-stepper');
+    this.stepper = new Stepper(stepEl!)
+  }
+
   ngOnInit() {
     this.currentUser = this.storageService.getUser();
     if (!this.currentUser.authenticated) {
       this.router.navigate(['/'])
     }
     this.canView = this.viewService.canView;
-
-    const stepEl = document.querySelector('.bs-stepper');
-    this.stepper = new Stepper(stepEl!)
   }
-
 }
