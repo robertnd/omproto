@@ -1,0 +1,97 @@
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #B6B2B2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btnx-success {
+  color: #fff;
+  background-color:  #218838;
+  border-color: #28a745;
+}
+
+.btnx-success:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #1e7e34;
+}
+
+.btnx-success:focus, .btnx-success.focus {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.btnx-success.disabled, .btnx-success:disabled {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btnx-success:not(:disabled):not(.disabled):active, .btnx-success:not(:disabled):not(.disabled).active,
+.show > .btnx-success.dropdown-toggle {
+  color: #fff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.btnx-success:not(:disabled):not(.disabled):active:focus, .btnx-success:not(:disabled):not(.disabled).active:focus,
+.show > .btnx-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.bsx-stepper-circle {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 2em;
+  height: 2em;
+  padding: .5em 0;
+  margin: .25rem;
+  line-height: 1em;
+  color: #fff;
+  background-color: #6c757d;
+  border-radius: 1em;
+}
+
+.active .bsx-stepper-circle {
+  background-color: #218838;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.table tr {
+height: 4px;
+}
+
+.outerscroll {
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.outerscroll div {
+  
+  // float: none;
+  // margin: 0 0.25%;
+  
+}

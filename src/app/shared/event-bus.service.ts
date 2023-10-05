@@ -8,6 +8,8 @@ import { EventData } from './event.class';
 })
 export class EventBusService {
   private subject$ = new Subject<EventData>();
+  private journey: Map<string, number> = new Map<string, number>()
+  getSubject = this.subject$.asObservable()
 
   emit(event: EventData) {
     this.subject$.next(event);
@@ -17,5 +19,14 @@ export class EventBusService {
     return this.subject$.pipe(
       filter((e: EventData) => e.name === eventName),
       map((e: EventData) => e["value"])).subscribe(action);
+  }
+
+  setJourney(nJourney: Map<string, number>) {
+    this.journey.clear()
+    nJourney.forEach((value: number, key: string) => this.journey.set(key, value) )
+  }
+
+  getJourney() {
+    return this.journey
   }
 }

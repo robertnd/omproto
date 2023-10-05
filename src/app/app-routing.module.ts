@@ -14,9 +14,13 @@ import { AdvisorDetailComponent } from './intermed/advisor-detail/advisor-detail
 import { AdvisorsNewComponent } from './intermed/advisors-new/advisors-new.component';
 import { AdvisorsComponent } from './intermed/advisors/advisors.component';
 import { HomeComponent } from './layout/home/home.component';
+import { SteptstComponent } from './business/crm/steptst/steptst.component';
+import { PlanSelectionComponent } from './business/crm/plan-selection/plan-selection.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, children: [] },
+  { path: 'business/crm/testfunc', component: SteptstComponent, children: [] },
+  { path: 'business/crm/planselect', component: PlanSelectionComponent, children: [] },
   { path: 'business/crm/customers/detail', component: CustomerDetailComponent, children: [] },
   { path: 'business/crm/customers-im', component: CustomersImComponent, children: [] },
   { path: 'business/crm/customers', component: CustomersComponent, children: [] },

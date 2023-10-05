@@ -58,6 +58,12 @@
                 </a>
               </li>
               <li class="nav-item" *ngIf="canView('customers-im',currentUser)">
+                <a routerLink="/business/crm/planselect" class="nav-link">
+                  <i class="fa fa-coins nav-icon"></i>
+                  <p>Onboarding (DEBUG)</p>
+                </a>
+              </li>
+              <li class="nav-item" *ngIf="canView('customers-im',currentUser)">
                 <a routerLink="/business/crm/customers-im" class="nav-link">
                   <i class="fa fa-users nav-icon"></i>
                   <p>My Customers</p>

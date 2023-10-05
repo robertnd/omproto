@@ -24,14 +24,14 @@ export class HeaderComponent {
   logout(): void {
     this.authService.logout().subscribe({
       next: res => {
-        console.log(res);
+        //console.log(res);
         this.storageService.clean();
         //this.router.navigate(['']);
         // window.location.reload();
         window.location.replace('/');
       },
       error: err => {
-        console.log(err);
+        //console.log(err);
       }
     });
   }

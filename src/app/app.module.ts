@@ -28,7 +28,9 @@ import { ProductsComponent } from './business/crm/products/products.component';
 import { ProductsNewComponent } from './business/crm/products-new/products-new.component';
 import { AdvisorDetailComponent } from './intermed/advisor-detail/advisor-detail.component';
 import { AdvisorsComponent } from './intermed/advisors/advisors.component';
-import { AdvisorsNewComponent } from './intermed/advisors-new/advisors-new.component'
+import { AdvisorsNewComponent } from './intermed/advisors-new/advisors-new.component';
+import { SteptstComponent } from './business/crm/steptst/steptst.component';
+import { PlanSelectionComponent } from './business/crm/plan-selection/plan-selection.component'
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { AdvisorsNewComponent } from './intermed/advisors-new/advisors-new.compo
     ProductsNewComponent,
     AdvisorDetailComponent,
     AdvisorsComponent,
-    AdvisorsNewComponent
+    AdvisorsNewComponent,
+    SteptstComponent,
+    PlanSelectionComponent
   ],
   imports: [
     BrowserModule,
