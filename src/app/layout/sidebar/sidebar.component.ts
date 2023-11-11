@@ -14,6 +14,7 @@ export class SidebarComponent {
   // function ref
   canView: any;
 
+
   constructor(private storageService: StorageService, 
     private viewService: ViewService,
     private router: Router) { }

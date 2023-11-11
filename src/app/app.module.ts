@@ -30,7 +30,9 @@ import { AdvisorDetailComponent } from './intermed/advisor-detail/advisor-detail
 import { AdvisorsComponent } from './intermed/advisors/advisors.component';
 import { AdvisorsNewComponent } from './intermed/advisors-new/advisors-new.component';
 import { SteptstComponent } from './business/crm/steptst/steptst.component';
-import { PlanSelectionComponent } from './business/crm/plan-selection/plan-selection.component'
+import { PlanSelectionComponent } from './business/crm/plan-selection/plan-selection.component';
+import { RecommendsComponent } from './business/crm/recommends/recommends.component';
+import { RecommendsProfileComponent } from './business/crm/recommends-profile/recommends-profile.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { PlanSelectionComponent } from './business/crm/plan-selection/plan-selec
     AdvisorsComponent,
     AdvisorsNewComponent,
     SteptstComponent,
-    PlanSelectionComponent
+    PlanSelectionComponent,
+    RecommendsComponent,
+    RecommendsProfileComponent
   ],
   imports: [
     BrowserModule,

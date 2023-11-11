@@ -15,8 +15,6 @@ export class Beneficiary {
         phone: string,
         dob: string,
         share: string
-        
-        
         ) {
 
       this.id = id

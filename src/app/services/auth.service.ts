@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 //const AUTH_API = 'http://localhost:9085/api/v1/user/';
 const AUTH_API = 'https://oldmutual.vergeinteractivelabs.com:9085/api/v1/user/';
+
 // remote
 //const AUTH_API = 'http://44.202.227.2:9085/api/v1/user/';
 //const AUTH_API = 'https://oldmutual.vergeinteractivelabs.com:9085/api/v1/user/';
@@ -17,7 +18,7 @@ const httpOptions = {
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(
@@ -31,6 +32,6 @@ export class AuthService {
   }
 
   logout(): Observable<any> {
-    return this.http.post(AUTH_API + 'logout', { }, httpOptions);
+    return this.http.post(AUTH_API + 'logout', {}, httpOptions);
   }
 }

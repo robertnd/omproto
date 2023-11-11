@@ -1,40 +1,40 @@
 export class Vehicle {
     id: number
-    reg_no: string
-    chassis_no: string
-    engine_no: string
+    regNo: string
+    chassisNo: string
+    engineNo: string
     make: string
     model: string
-    body_type: string
+    bodyType: string
     cc: string
     yom: string
-    proposer_value: string
-    
+    purpose: string
+    estValue: number
     
     constructor(
         id: number,
-        reg_no: string, 
-        chassis_no: string, 
-        engine_no: string,
+        regNo: string, 
+        chassisNo: string, 
+        engineNo: string,
         make: string,
         model: string,
-        body_type: string,
+        bodyType: string,
         cc: string,
         yom: string,
-        proposer_value: string
-        
+        purpose: string,
+        estValue: number
         
         ) {
-
       this.id = id
-      this.reg_no = reg_no;
-      this.chassis_no = chassis_no;
-      this.engine_no = engine_no;
+      this.regNo = regNo;
+      this.chassisNo = chassisNo;
+      this.engineNo = engineNo;
       this.make = make;
       this.model = model;
-      this.body_type = body_type;
+      this.bodyType = bodyType;
       this.cc = cc;
       this.yom = yom;
-      this.proposer_value = proposer_value;
+      this.purpose = purpose;
+      this.estValue = estValue;
     }
   }

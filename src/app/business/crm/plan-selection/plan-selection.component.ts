@@ -3,7 +3,9 @@ import { StorageService } from 'src/app/services/storage.service'
 import { ViewService } from 'src/app/services/view.service'
 import { Router } from '@angular/router'
 import { EventBusService } from 'src/app/shared/event-bus.service';
-import { EventData } from 'src/app/shared/event.class';
+import { PersonalInfo } from 'src/app/shared/personalinfo.class';
+import { Contacts } from 'src/app/shared/contacts.class';
+import { Occupation } from 'src/app/shared/occupation.class';
 
 @Component({
   selector: 'app-plan-selection',
@@ -16,7 +18,13 @@ export class PlanSelectionComponent implements AfterViewInit, OnInit {
   canView: any
   alreadyRun: Map<string, number> = new Map<string, number>()
   journey: Map<string, number> = new Map<string, number>()
+  plans: Map<string, string> = new Map<string, string>()
   // journeys: string[] = []
+
+  personalInfo: PersonalInfo = new PersonalInfo()
+  contacts: Contacts = new Contacts();
+  occupation: Occupation = new Occupation();
+  
 
   personalPensionPlanPath: boolean = false
   individualRetirementPath: boolean = false
@@ -50,9 +58,17 @@ export class PlanSelectionComponent implements AfterViewInit, OnInit {
       this.journey.delete(pathname);
     } else {
       this.journey.set(pathname, 1);
-      //console.log(this.journey)
     }
     // this.eventBusService.emit(new EventData("journey", this.journeys))
+  }
+
+  addRemovePlan(planName: string) {
+    if (this.plans.has(planName)) {
+      this.plans.delete(planName);
+    } else {
+      this.plans.set(planName, planName);
+    }
+
   }
 
   canSubmit() {
@@ -65,6 +81,13 @@ export class PlanSelectionComponent implements AfterViewInit, OnInit {
 
   onSubmit() {
     this.eventBusService.setJourney(this.journey)
+    this.eventBusService.setPlans(this.plans)
+
+    // new journey, unset personalInfo?
+    this.eventBusService.setPersonalInfo(this.personalInfo)
+    this.eventBusService.setContacts(this.contacts)
+    this.eventBusService.setOccupation(this.occupation)
+
     this.router.navigate(['/business/crm/testfunc'])
   }
 

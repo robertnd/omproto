@@ -34,37 +34,37 @@
                                     <tr>
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Personal Pension Plan</p></th>
                                         <td><input type="checkbox" id="personalPensionPlanOpt" 
-                                            (change)="addRemovePath('personalPensionPlan-remitinfo');addRemovePath('personalPensionPlan-address');addRemovePath('personalPensionPlan-dependants');addRemovePath('personalPensionPlan-beneficiaries')"></td>
+                                            (change)="addRemovePlan('personalPensionPlan');addRemovePath('personalPensionPlan-remitinfo');addRemovePath('personalPensionPlan-address');addRemovePath('personalPensionPlan-dependants');addRemovePath('personalPensionPlan-beneficiaries')"></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Individual Retirement Scheme</p></th>
                                         <!-- <th scope="row">Individual Retirement Scheme</th> -->
                                         <td><input type="checkbox" id="retirementSchemeOpt"
-                                                (change)="addRemovePath('retirementScheme-main');addRemovePath('retirementScheme-consent')"></td>
+                                                (change)="addRemovePlan('retirementScheme');addRemovePath('retirementScheme-main');addRemovePath('retirementScheme-consent')"></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Maxpac Personal Accident Cover</p></th>
                                         <!-- <th scope="row">Maxpac Personal Accident Cover</th> -->
                                         <td><input type="checkbox" id="personalAccidentOpt"
-                                                (change)="addRemovePath('personalAccident-beneficiary');addRemovePath('personalAccident-spouse');addRemovePath('personalAccident-children');addRemovePath('personalAccident-decl')"></td>
+                                                (change)="addRemovePlan('personalAccident');addRemovePath('personalAccident-beneficiary');addRemovePath('personalAccident-spouse');addRemovePath('personalAccident-children');addRemovePath('personalAccident-decl')"></td>
                                     </tr>
                                     <tr>
                                         <!-- <th scope="row">Private Vehicle Insurance</th> -->
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Private Vehicle Insurance</p></th>
                                         <td><input type="checkbox" id="vehicleInsuranceOpt"
-                                                (change)="addRemovePath('vehicleInsurance-privacy');addRemovePath('vehicleInsurance-consent');addRemovePath('vehicleInsurance-vehicles');addRemovePath('vehicleInsurance')"></td>
+                                                (change)="addRemovePlan('vehicleInsurance');addRemovePath('vehicleInsurance-privacy');addRemovePath('vehicleInsurance-consent');addRemovePath('vehicleInsurance-vehicles');addRemovePath('vehicleInsurance-asserts');addRemovePath('vehicleInsurance-policy')"></td>
                                     </tr>
                                     <tr>
                                         <!-- <th scope="row">Student Internship</th> -->
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Student Internship</p></th>
                                         <td><input type="checkbox" id="internshipOpt"
-                                                (change)="addRemovePath('internship-privacy');addRemovePath('internship-consent');addRemovePath('internship')"></td>
+                                                (change)="addRemovePlan('internship');addRemovePath('internship-privacy');addRemovePath('internship-consent');addRemovePath('internship')"></td>
                                     </tr>
                                     <tr>
                                         <!-- <th scope="row">Unit Trust Onboarding</th> -->
                                         <th scope="row" class="w-50 text-right"><p class="font-weight-light" style="margin-bottom:0px; margin-top:0px">Unit Trust Onboarding</p></th>
                                         <td><input type="checkbox" id="unitTrustOpt"
-                                                (change)="addRemovePath('unitTrust-ja');addRemovePath('unitTrust-lw');addRemovePath('unitTrust-sources');addRemovePath('unitTrust-mpesa');addRemovePath('unitTrust-incomedist');addRemovePath('unitTrust-privacy');addRemovePath('unitTrust-risk')"></td>
+                                                (change)="addRemovePlan('unitTrust');addRemovePath('unitTrust-ja');addRemovePath('unitTrust-nok');addRemovePath('unitTrust-lw');addRemovePath('unitTrust-lw-consent');addRemovePath('unitTrust-sources');addRemovePath('unitTrust-mpesa');addRemovePath('unitTrust-incomedist');addRemovePath('unitTrust-privacy');addRemovePath('unitTrust-risk')"></td>
                                     </tr>
                                     <tr>
                                     </tr>

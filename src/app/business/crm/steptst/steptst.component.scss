@@ -2,10 +2,30 @@ input[type="text"],
 select.form-control {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #B6B2B2;
+  border-bottom: 1px solid #514f4f;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
+  flex: 10 0 200px;
+}
+
+input[type="date"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+}
+
+input[type="date"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #514f4f;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  flex: 10 0 200px;
+  padding-bottom: 1em;
 }
 
 input[type="text"]:focus,
@@ -89,9 +109,6 @@ height: 4px;
   -webkit-overflow-scrolling: touch;
 }
 
-.outerscroll div {
-  
-  // float: none;
-  // margin: 0 0.25%;
-  
-}
+// *{
+//   outline:1px solid red;
+//   }

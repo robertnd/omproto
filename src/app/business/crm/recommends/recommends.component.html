@@ -1,0 +1,108 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Recommendations</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Recommendations</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div><p class="font-weight-bold" style="margin-left:10px;color:red">{{ loadErrorMsg }}</p></div>
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%">
+                                Names
+                            </th>
+                            <th style="width: 15%">
+                                Contact
+                            </th>
+                            <th>
+                                Products
+                            </th>
+                            <th>
+                                Recommendations
+                            </th>
+                            <th style="width: 20%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let r of recommendations | keyvalue">
+                            <td>
+                                <a routerLink="#" (click)="convert(r.key)">{{ r.value.firstName }} {{ r.value.otherNames }} {{ r.value.surname }}</a>
+                                <br>
+                            </td>
+                            <td>
+                                <a routerLink="#"><i class="fa fa-phone m-2"></i>{{ r.value.mobileNumber }}</a><br>
+                                <a routerLink="#"><i class="fa fa-envelope m-2"></i>{{ r.value.email }}</a>
+                            </td>
+                            <td class="project_progress">
+                                <div [innerHTML]="smartFormat(r.value)">
+                                </div>
+                            </td>
+                            <td class="project_progress">
+                                <div *ngIf="r.value.lifeRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'life',r.value.lifeRecommendations)">{{ r.value.lifeRecommendations }}</a>
+                                    </small>
+                                </div>
+                                <div *ngIf="r.value.motorRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'motor',r.value.motorRecommendations)">{{ r.value.motorRecommendations }}</a>
+                                    </small>
+                                </div>
+                                <div *ngIf="r.value.nonMotorRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'nonMotor',r.value.nonMotorRecommendations)">{{ r.value.nonMotorRecommendations }}</a>
+                                    </small>
+                                </div>
+                                <div *ngIf="r.value.travelRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'travel',r.value.travelRecommendations)">{{ r.value.travelRecommendations }}</a>
+                                    </small>
+                                </div>
+                                <div *ngIf="r.value.healthRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'health',r.value.healthRecommendations)">{{ r.value.healthRecommendations }}</a>
+                                    </small>
+                                </div>
+                                <div *ngIf="r.value.investmentRecommendations" style="border-bottom:1px solid gray;">
+                                    <small>
+                                        <a routerLink="#" (click)="convertOne(r.key,'invest',r.value.investmentRecommendations)">{{ r.value.investmentRecommendations }}</a>
+                                    </small>
+                                </div>
+                            </td>
+                            <td class="project-actions text-right">
+                                <a routerLink="#" (click)="convert(r.key)"><i class="fa fa-handshake m-2"></i>Onboard All</a>&nbsp;&nbsp; 
+                                <a routerLink="#" (click)="setRecommendProfile(r.value)"><i class="fas fa-user m-2"></i>Profile</a>&nbsp;&nbsp; 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -28,8 +28,6 @@ export class CustomersComponent {
   }
 
   login(): void {
-    //console.log('Logged Out')
-    // this.router.navigateByUrl('/xxxxx');
     window.location.replace('/');
   }
 }

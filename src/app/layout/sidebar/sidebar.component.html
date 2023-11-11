@@ -13,7 +13,7 @@
           <img src="assets/img/user-gen2.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Joseph Kanyua</a>
+          <a href="#" class="d-block">{{ currentUser.profileName }}</a>
           <p style="color:bisque;">{{ currentUser.token.roles[0].replace('ROLE_','') }}</p>
         </div>
       </div>
@@ -57,19 +57,25 @@
                   <p>Customers</p>
                 </a>
               </li>
-              <li class="nav-item" *ngIf="canView('customers-im',currentUser)">
+              <li class="nav-item" style="margin-left:20px;" *ngIf="canView('customers-im',currentUser)">
                 <a routerLink="/business/crm/planselect" class="nav-link">
-                  <i class="fa fa-coins nav-icon"></i>
-                  <p>Onboarding (DEBUG)</p>
+                  <i class="fa fa-handshake nav-icon"></i>
+                  <p>Onboarding</p>
                 </a>
               </li>
-              <li class="nav-item" *ngIf="canView('customers-im',currentUser)">
+              <li class="nav-item" style="margin-left:20px;">
+                <a routerLink="/business/crm/recommends" class="nav-link">
+                  <i class="fa fa-thumbs-up nav-icon"></i>
+                  <p>Recommendations</p>
+                </a>
+              </li>
+              <li class="nav-item" style="margin-left:20px;" *ngIf="canView('customers-im',currentUser)">
                 <a routerLink="/business/crm/customers-im" class="nav-link">
                   <i class="fa fa-users nav-icon"></i>
                   <p>My Customers</p>
                 </a>
               </li>
-              <li class="nav-item" *ngIf="canView('leads',currentUser)">
+              <li class="nav-item" style="margin-left:20px;" *ngIf="canView('leads',currentUser)">
                 <a routerLink="/business/crm/leads" class="nav-link">
                   <i class="fas fa-coins nav-icon"></i>
                   <p>Leads
@@ -77,7 +83,7 @@
                   </p>
                 </a>
               </li>
-              <li class="nav-item" *ngIf="canView('leads-im',currentUser)">
+              <li class="nav-item" style="margin-left:20px;"*ngIf="canView('leads-im',currentUser)">
                 <a routerLink="/business/crm/leads-im" class="nav-link">
                   <i class="fas fa-coins nav-icon"></i>
                   <p>My Leads</p>

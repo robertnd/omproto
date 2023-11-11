@@ -4,6 +4,7 @@ export class Dependant {
   ds: string
   dob: string
   cover: string
+  
   constructor(
       id: number,
       names: string, 

@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   isLoggedIn = true;
   isLoginFailed = false;
   errorMessage = '';
+  profileName = '';
   roles: string[] = [];
 
   constructor(private authService: AuthService, private storageService: StorageService) { }
@@ -38,10 +39,12 @@ export class LoginComponent implements OnInit {
         if (data.authenticated == false) {
           this.errorMessage = data.message;
           this.isLoginFailed = true;
+          this.profileName = '';
         } else {
           this.storageService.saveUser(data);
           this.isLoginFailed = false;
           this.isLoggedIn = true;
+          this.profileName = data.profileName;
           this.roles = this.storageService.getUser().roles;
           this.reloadPage();
         }

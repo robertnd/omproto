@@ -1,0 +1,148 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-4">
+                    <h1>Recommendation Profile</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active"><a routerLink="/business/crm/recommends">Recommendations</a></li>
+                        <li class="breadcrumb-item active">Recommend Profile</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-7">
+                    <div class="callout callout-info">
+                        <h5><i class="fas fa-info"></i> Note:</h5>
+                        ...
+                    </div>
+
+                    <div class="invoice p-3 mb-3">
+
+                        <div class="row">
+                            <div class="col-9">
+                                <h4>
+                                    <i class="fa fa-user mr-3"></i>{{ personalInfo.title}} {{ personalInfo.firstName}} {{ personalInfo.middleNames}} {{ personalInfo.surname}} <br>
+                                </h4>
+                                <br>
+                            </div>
+
+                        </div>
+
+                        <div class="row invoice-info">
+                            <div class="col-sm-4 invoice-col">
+                                
+                                <address>
+                                    <strong>Work:</strong><br>
+                                    <i class="fa fa-phone mr-3"></i>(Office) {{ occupation.workPhoneNo }}<br>
+                                    <i class="fa fa-envelope mr-3"></i>(Office) {{ occupation.workEmail }}<br>
+                                    {{ occupation.jobTitle }}<br>
+                                    {{ occupation.occupationType}} {{ occupation.occupationNarration}}<br>
+                                    {{ occupation.workplaceName }}<br>
+                                    {{ occupation.workPostalAddress }} {{ occupation.workPostalCode }}<br>
+                                    {{ occupation.workTownCity }} <br>
+                                    <i class="fa fa-map-marker mr-3"></i>(Office) {{ occupation.workPhysicalAddress }}
+                                </address>
+                            </div>
+
+                            <div class="col-sm-4 invoice-col">
+                                <address>
+                                    <strong>Contacts:</strong><br>
+                                    <i class="fa fa-phone mr-3"></i> (Mobile) {{ contacts.mobileNo }}<br>
+                                    <i class="fa fa-phone mr-3"></i>(Home) {{ contacts.homeNo }}<br>
+                                    <i class="fa fa-envelope mr-3"></i>(Personal) {{ contacts.email }}<br>
+                                    {{ contacts.postalAddress }} {{ contacts.postalCode }}<br>
+                                    {{ contacts.townCity }} <br>
+                                    <i class="fa fa-map-marker mr-3"></i> {{ contacts.physicalAddress }}
+                                </address>
+                            </div>
+
+                            <div class="col-sm-4 invoice-col">
+                                
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="row no-print">
+                            <div class="col-9">
+                                <a href="invoice-print.html" rel="noopener" target="_blank"
+                                    class="btn btn-default float-left"><i class="fas fa-print"></i> Print</a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#rlist" data-toggle="tab">Recommendations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#plist" data-toggle="tab">Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+
+                                <div class="active tab-pane" id="rlist">
+                                    <div><p class="font-weight-light" style="margin-left:10px;color:red">{{ loadErrorMsg }}</p></div>
+                                    <div class="row">
+                                        <div class="col-9 table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let r of recommList | keyvalue">
+                                                        <td><a routerLink="#" (click)="convertOne(r.key,r.value)"><i class="fa fa-handshake m-2"></i>{{ r.value }}</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a routerLink="#" (click)="convert()"><i class="fa fa-handshake m-2"></i>Onboard All</a>&nbsp;&nbsp; 
+                                        </div>
+                                    </div>
+                                
+                                </div>
+
+                                <div class="active tab-pane" id="plist">
+                                    
+                                    <div class="row">
+                                        <div class="col-9 table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let p of productList | keyvalue">
+                                                        <td><i class="fa fa-tag m-3"></i>{{ p.value }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
